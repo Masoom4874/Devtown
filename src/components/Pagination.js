@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
-const Pagination = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Pagination = (setting) => {
+  const [currentPage, setCurrentPage] = useState(setting.initialPage);
   const totalPages = 10;
 
   const handlePageChange = (page) => {
-    if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-    }
+      setting.paginate(setting.data,page)
+    
   };
 
   const generatePageNumbers = () => {
@@ -22,6 +22,7 @@ const Pagination = () => {
           <a className="page-link" href="#" onClick={() => handlePageChange(i)}>
             {i}
           </a>
+            
         </li>
       );
     }

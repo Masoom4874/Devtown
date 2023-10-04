@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import img1 from "../assests/img1.jpg";
 import { TbUsers } from "react-icons/tb";
 import { LuFuel } from "react-icons/lu";
@@ -6,6 +6,8 @@ import { SlSpeedometer } from "react-icons/sl";
 import { RiSteeringFill } from "react-icons/ri";
 import { AiOutlineHeart } from "react-icons/ai";
 import mockCarData from "./Storage";
+import Pagination from "./Pagination";
+import SearchBar from "./Navbar";
 
 const Card = ({ carData }) => {
   return (
@@ -48,7 +50,7 @@ const Card = ({ carData }) => {
               <img src={carData.img3} className="d-block w-100" alt="..." />
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
       <div className="card-body">
         <div className="d-flex justify-content-between mb-2">
@@ -101,12 +103,52 @@ const Card = ({ carData }) => {
 };
 
 const CardList = () => {
+  const [carList, setCarList] = React.useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const setting = {
+    paginate: (items, page = 1, perPage = 6) => {
+      let data = items.slice(perPage * (page - 1), perPage * page);
+      setCarList([...data]);
+    },
+    initialPage: 1,
+    data: mockCarData,
+  };
+
+  useEffect(() => {
+    setting.paginate(mockCarData);
+  }, []);
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    const filteredCars = mockCarData.filter((car) =>
+      car.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setting.paginate(filteredCars);
+  };
+
+  const handleSearch = (query) => {
+    const filteredCars = mockCarData.filter((car) =>
+      car.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setting.paginate(filteredCars);
+  };
   return (
-    <div className="d-flex flex-wrap justify-content-between mt-3">
-      {mockCarData.map((car, index) => (
-        <Card key={index} carData={car} />
-      ))}
-    </div>
+    <>
+      <div>
+        <div>
+          <SearchBar onSearch={handleSearch} />
+        </div>
+        <div>
+          <div className="d-flex  flex-wrap justify-content-between mt-3">
+            {carList.map((car, index) => (
+              <Card key={index} carData={car} />
+            ))}
+          </div>
+          <Pagination {...setting} />
+        </div>
+      </div>
+    </>
   );
 };
 
