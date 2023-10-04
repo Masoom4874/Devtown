@@ -10,17 +10,20 @@ import Pagination from "./Pagination";
 import SearchBar from "./Navbar";
 
 const Card = ({ carData }) => {
+  let carouselId = "carouselExampleIndicators" + carData.id;
+  let carouseltargetId = "#carouselExampleIndicators" + carData.id;
+
   return (
     <div
       className="card border-0 rounded-4 main-bg-color shadow mb-3"
       style={{ width: "30%" }}
     >
       <div className="m-2">
-        <div id="carouselExampleIndicators" className="carousel slide">
+        <div id={carouselId} className="carousel slide">
           <div className="carousel-indicators">
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target={carouseltargetId}
               data-bs-slide-to={0}
               className="active"
               aria-current="true"
@@ -28,13 +31,13 @@ const Card = ({ carData }) => {
             />
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target={carouseltargetId}
               data-bs-slide-to={1}
               aria-label="Slide 2"
             />
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target={carouseltargetId}
               data-bs-slide-to={2}
               aria-label="Slide 3"
             />
