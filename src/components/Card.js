@@ -14,7 +14,41 @@ const Card = ({ carData }) => {
       style={{ width: "30%" }}
     >
       <div className="m-2">
-        <img src={img1} className="card-img-top rounded" alt="..." />
+        <div id="carouselExampleIndicators" className="carousel slide">
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to={0}
+              className="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to={1}
+              aria-label="Slide 2"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to={2}
+              aria-label="Slide 3"
+            />
+          </div>
+          <div className="carousel-inner rounded-4">
+            <div className="carousel-item active">
+              <img src={carData.img1} className="d-block w-100" alt="..." />
+            </div>
+            <div className="carousel-item">
+              <img src={carData.img2} className="d-block w-100" alt="..." />
+            </div>
+            <div className="carousel-item">
+              <img src={carData.img3} className="d-block w-100" alt="..." />
+            </div>
+          </div>
+        </div>{" "}
       </div>
       <div className="card-body">
         <div className="d-flex justify-content-between mb-2">

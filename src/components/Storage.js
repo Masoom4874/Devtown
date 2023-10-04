@@ -1,5 +1,8 @@
 const mockCarData = [
   {
+    img1: "https://media.istockphoto.com/id/1152427256/photo/toyota-rav4-hybrid-on-the-road.jpg?s=612x612&w=0&k=20&c=58VwLX3Sb0WMPhDrI0m_MZLi0Zba3pUxPCA09XHfXJ4=",
+    img2: "https://media.istockphoto.com/id/1155948803/photo/toyota-rav4.jpg?s=612x612&w=0&k=20&c=KtuAjSP9ZIcbZxfsD9YN0b0H5d48m_274239qDSNWEA=",
+    img3: "https://media.istockphoto.com/id/506508356/photo/toyota-rav4-hybrid-crossover-suv.jpg?s=612x612&w=0&k=20&c=FkmcV5AopwJoxdPTRVwhPiHs0XEX7Mv0Q_EqVSO5DVM=",
     name: "TOYOTA RAV4",
     year: "2021",
     seats: "4",
@@ -9,6 +12,9 @@ const mockCarData = [
     costOfRent: "440",
   },
   {
+    img1: "https://media.istockphoto.com/id/1152427256/photo/toyota-rav4-hybrid-on-the-road.jpg?s=612x612&w=0&k=20&c=58VwLX3Sb0WMPhDrI0m_MZLi0Zba3pUxPCA09XHfXJ4=",
+    img2: "https://media.istockphoto.com/id/1155948803/photo/toyota-rav4.jpg?s=612x612&w=0&k=20&c=KtuAjSP9ZIcbZxfsD9YN0b0H5d48m_274239qDSNWEA=",
+    img3: "https://media.istockphoto.com/id/506508356/photo/toyota-rav4-hybrid-crossover-suv.jpg?s=612x612&w=0&k=20&c=FkmcV5AopwJoxdPTRVwhPiHs0XEX7Mv0Q_EqVSO5DVM=",
     name: "Honda Civic",
     year: "2020",
     seats: "5",
@@ -18,6 +24,9 @@ const mockCarData = [
     costOfRent: "380",
   },
   {
+    img1: "https://media.istockphoto.com/id/1152427256/photo/toyota-rav4-hybrid-on-the-road.jpg?s=612x612&w=0&k=20&c=58VwLX3Sb0WMPhDrI0m_MZLi0Zba3pUxPCA09XHfXJ4=",
+    img2: "https://media.istockphoto.com/id/1155948803/photo/toyota-rav4.jpg?s=612x612&w=0&k=20&c=KtuAjSP9ZIcbZxfsD9YN0b0H5d48m_274239qDSNWEA=",
+    img3: "https://media.istockphoto.com/id/506508356/photo/toyota-rav4-hybrid-crossover-suv.jpg?s=612x612&w=0&k=20&c=FkmcV5AopwJoxdPTRVwhPiHs0XEX7Mv0Q_EqVSO5DVM=",
     name: "Ford Mustang",
     year: "2022",
     seats: "2",
@@ -27,6 +36,9 @@ const mockCarData = [
     costOfRent: "550",
   },
   {
+    img1: "https://media.istockphoto.com/id/1152427256/photo/toyota-rav4-hybrid-on-the-road.jpg?s=612x612&w=0&k=20&c=58VwLX3Sb0WMPhDrI0m_MZLi0Zba3pUxPCA09XHfXJ4=",
+    img2: "https://media.istockphoto.com/id/1155948803/photo/toyota-rav4.jpg?s=612x612&w=0&k=20&c=KtuAjSP9ZIcbZxfsD9YN0b0H5d48m_274239qDSNWEA=",
+    img3: "https://media.istockphoto.com/id/506508356/photo/toyota-rav4-hybrid-crossover-suv.jpg?s=612x612&w=0&k=20&c=FkmcV5AopwJoxdPTRVwhPiHs0XEX7Mv0Q_EqVSO5DVM=",
     name: "TOYOTA RAV4",
     year: "2021",
     seats: "4",
@@ -36,6 +48,9 @@ const mockCarData = [
     costOfRent: "440",
   },
   {
+    img1: "https://media.istockphoto.com/id/1152427256/photo/toyota-rav4-hybrid-on-the-road.jpg?s=612x612&w=0&k=20&c=58VwLX3Sb0WMPhDrI0m_MZLi0Zba3pUxPCA09XHfXJ4=",
+    img2: "https://media.istockphoto.com/id/1155948803/photo/toyota-rav4.jpg?s=612x612&w=0&k=20&c=KtuAjSP9ZIcbZxfsD9YN0b0H5d48m_274239qDSNWEA=",
+    img3: "https://media.istockphoto.com/id/506508356/photo/toyota-rav4-hybrid-crossover-suv.jpg?s=612x612&w=0&k=20&c=FkmcV5AopwJoxdPTRVwhPiHs0XEX7Mv0Q_EqVSO5DVM=",
     name: "Honda Civic",
     year: "2020",
     seats: "5",
@@ -45,6 +60,9 @@ const mockCarData = [
     costOfRent: "380",
   },
   {
+    img1: "https://media.istockphoto.com/id/1152427256/photo/toyota-rav4-hybrid-on-the-road.jpg?s=612x612&w=0&k=20&c=58VwLX3Sb0WMPhDrI0m_MZLi0Zba3pUxPCA09XHfXJ4=",
+    img2: "https://media.istockphoto.com/id/1155948803/photo/toyota-rav4.jpg?s=612x612&w=0&k=20&c=KtuAjSP9ZIcbZxfsD9YN0b0H5d48m_274239qDSNWEA=",
+    img3: "https://media.istockphoto.com/id/506508356/photo/toyota-rav4-hybrid-crossover-suv.jpg?s=612x612&w=0&k=20&c=FkmcV5AopwJoxdPTRVwhPiHs0XEX7Mv0Q_EqVSO5DVM=",
     name: "Ford Mustang",
     year: "2022",
     seats: "2",
