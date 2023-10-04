@@ -1,0 +1,12 @@
+.App {
+  max-height: 200vh;
+  max-width: 100vw;
+}
+
+.main-width {
+  width: 60vw;
+}
+
+.main-bg-color {
+  background-color: #ecf2ff;
+}

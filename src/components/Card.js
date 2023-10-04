@@ -1,0 +1,79 @@
+import React from "react";
+import img1 from "../assests/img1.jpg";
+import { TbUsers } from "react-icons/tb";
+import { LuFuel } from "react-icons/lu";
+import { SlSpeedometer } from "react-icons/sl";
+import { RiSteeringFill } from "react-icons/ri";
+import { AiOutlineHeart } from "react-icons/ai";
+import mockCarData from "./Storage";
+
+const Card = ({ carData }) => {
+  return (
+    <div
+      className="card border-0 rounded-4 main-bg-color shadow mb-3"
+      style={{ width: "30%" }}
+    >
+      <div className="m-2">
+        <img src={img1} className="card-img-top rounded" alt="..." />
+      </div>
+      <div className="card-body">
+        <div className="d-flex justify-content-between mb-2">
+          <h5 className="card-title">{carData.name}</h5>
+          <div
+            className="h6 font-weight-bold px-2 py-1 border rounded-3"
+            style={{ border: "1px dotted #000" }}
+          >
+            {carData.year}
+          </div>
+        </div>
+        <div className="d-flex mb-1">
+          <div className="w-50">
+            <TbUsers className="text-primary me-1" /> {carData.seats} People
+          </div>
+          <div className="w-50">
+            <LuFuel className="text-primary me-1" /> {carData.typeOfFuel}
+          </div>
+        </div>
+        <div className="d-flex">
+          <div className="w-50">
+            <SlSpeedometer className="text-primary me-1" /> {carData.mileage}
+            km/1-litre
+          </div>
+          <div className="w-50">
+            <RiSteeringFill className="text-primary me-1" /> {carData.gearType}
+          </div>
+        </div>
+        <hr />
+        <div className="d-flex justify-content-between">
+          <h4>
+            ${carData.costOfRent} <span className="fs-6">/ month</span>
+          </h4>
+          <div className="d-flex gap-1">
+            <a
+              href="#"
+              className="btn me-1 rounded-3"
+              style={{ backgroundColor: "#E3DFFD" }}
+            >
+              <AiOutlineHeart />{" "}
+            </a>
+            <a href="#" className="btn btn-primary rounded-3">
+              Rent Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CardList = () => {
+  return (
+    <div className="d-flex flex-wrap justify-content-between mt-3">
+      {mockCarData.map((car, index) => (
+        <Card key={index} carData={car} />
+      ))}
+    </div>
+  );
+};
+
+export default CardList;

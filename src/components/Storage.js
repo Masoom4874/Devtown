@@ -1,0 +1,58 @@
+const mockCarData = [
+  {
+    name: "TOYOTA RAV4",
+    year: "2021",
+    seats: "4",
+    typeOfFuel: "Hybrid",
+    mileage: "6.1",
+    gearType: "Automatic",
+    costOfRent: "440",
+  },
+  {
+    name: "Honda Civic",
+    year: "2020",
+    seats: "5",
+    typeOfFuel: "Gasoline",
+    mileage: "7.0",
+    gearType: "Automatic",
+    costOfRent: "380",
+  },
+  {
+    name: "Ford Mustang",
+    year: "2022",
+    seats: "2",
+    typeOfFuel: "Gasoline",
+    mileage: "12.5",
+    gearType: "Manual",
+    costOfRent: "550",
+  },
+  {
+    name: "TOYOTA RAV4",
+    year: "2021",
+    seats: "4",
+    typeOfFuel: "Hybrid",
+    mileage: "6.1",
+    gearType: "Automatic",
+    costOfRent: "440",
+  },
+  {
+    name: "Honda Civic",
+    year: "2020",
+    seats: "5",
+    typeOfFuel: "Gasoline",
+    mileage: "7.0",
+    gearType: "Automatic",
+    costOfRent: "380",
+  },
+  {
+    name: "Ford Mustang",
+    year: "2022",
+    seats: "2",
+    typeOfFuel: "Gasoline",
+    mileage: "12.5",
+    gearType: "Manual",
+    costOfRent: "550",
+  },
+];
+
+export default mockCarData;
