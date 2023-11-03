@@ -13,6 +13,10 @@ const Card = ({ carData }) => {
   let carouselId = "carouselExampleIndicators" + carData.id;
   let carouseltargetId = "#carouselExampleIndicators" + carData.id;
 
+  const cardStyle = {
+    width: "100%", // To make the card responsive
+    maxWidth: "300px", // Set a max-width for responsiveness
+  };
   const imgStyle = {
     width: "100%",
     height: "200px", // Adjust the height as needed
@@ -21,8 +25,8 @@ const Card = ({ carData }) => {
 
   return (
     <div
-      className="card border-0 rounded-4 main-bg-color shadow mb-3"
-      style={{ width: "30%" }}
+      className="card border-0 rounded-4 main-bg-color shadow mb-3 "
+      style={cardStyle}
     >
       <div className="m-2">
         <div id={carouselId} className="carousel slide">
