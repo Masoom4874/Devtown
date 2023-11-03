@@ -13,6 +13,12 @@ const Card = ({ carData }) => {
   let carouselId = "carouselExampleIndicators" + carData.id;
   let carouseltargetId = "#carouselExampleIndicators" + carData.id;
 
+  const imgStyle = {
+    width: "100%",
+    height: "200px", // Adjust the height as needed
+    objectFit: "cover",
+  };
+
   return (
     <div
       className="card border-0 rounded-4 main-bg-color shadow mb-3"
@@ -44,13 +50,28 @@ const Card = ({ carData }) => {
           </div>
           <div className="carousel-inner rounded-4">
             <div className="carousel-item active">
-              <img src={carData.img1} className="d-block w-100" alt="..." />
+              <img
+                src={carData.img1}
+                className="d-block w-100"
+                alt="..."
+                style={imgStyle}
+              />
             </div>
             <div className="carousel-item">
-              <img src={carData.img2} className="d-block w-100" alt="..." />
+              <img
+                src={carData.img2}
+                className="d-block w-100"
+                alt="..."
+                style={imgStyle}
+              />
             </div>
             <div className="carousel-item">
-              <img src={carData.img3} className="d-block w-100" alt="..." />
+              <img
+                src={carData.img3}
+                className="d-block w-100"
+                alt="..."
+                style={imgStyle}
+              />
             </div>
           </div>
         </div>
